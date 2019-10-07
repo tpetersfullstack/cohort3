@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="basic.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<h1>Hello World from HTML</h1>
+
+<body>
+    <input type="Number" id="myInput" name="MyInputNumber">
+    
+    <br>
+    
+    <button id="myButton" type="button">Push Me</button>
+    
+    <script>
+
+        let myVar = document.getElementById("myInput").value;
+
+        function onButtonClick() {
+            console.log("on click");           
+        };
+        
+        document.getElementById("myButton").addEventListener("click", onButtonClick);
+
+        if (isNaN(myVar)) {
+            
+            //Add 1 to the Number
+            myVar = myVar + 1;
+            //window.alert('Is a Number'); Why does this not work?
+            console.log(myVar);
+
+        } else {
+            window.alert('Not a Number');
+        }
+    </script>
+
+</body>
+
+</html>
