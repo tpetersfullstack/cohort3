@@ -1,8 +1,14 @@
 //console.log('Hello World from basic.js');
 //why can't i declare variables in here?
-//let myVar = document.getElementById("myInput").value;
-//this was not assigned
+//let myVar;
+let myVar = document.getElementById("myInput").value;
+
+
+
+//Add an Event Listener
 document.getElementById("myButton").addEventListener("click", onButtonClicked);
+
+//I must call the size function from the click event of the button
 
 function size(myInt) {
     if (myInt >= 1 && myInt <= 9) {
@@ -20,7 +26,7 @@ function size(myInt) {
 
 //Create function 'onButtonClicked'
 function onButtonClicked() {
-    console.log(myVar);
+console.log(myVar);
 console.log("I'm in the click event");   
 };
 
