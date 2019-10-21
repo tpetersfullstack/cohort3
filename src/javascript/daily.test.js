@@ -4,7 +4,7 @@
 import functions from './daily.js'    //Gets/Tells jest where to look for your Stubs
 //Asertion - EXPECT to be true
 /* ******************************** Unit Test 1 ****************************************** */
-test('myTest1', () => {               //test is a jest function
+test('myTest1', () => {               //test is a jest function w/methods
   expect(functions.add(2, 2)).toBe(4);
 });
 
