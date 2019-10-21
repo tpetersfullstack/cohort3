@@ -1,14 +1,14 @@
-//how does this work?
-import functions from './daily.js'
+/* *************************************************************************************** */
+/* Jest is a "Test Runner" and an "Assertion Library" containing Methods to test your code */
+/* *************************************************************************************** */
+import functions from './daily.js'    //Gets/Tells jest where to look for your Stubs
+//Asertion - EXPECT to be true
+/* ******************************** Unit Test 1 ****************************************** */
+test('myTest1', () => {               //test is a jest function
+  expect(functions.add(2, 2)).toBe(4);
+});
 
-//test('My Daily Test', () => {
- //  expect(functions.size(-1)).toBe("small"); 
- //  });
-//This is the Stub
- test('Todd Test to fail', () => {    
-   expect(functions.add(2,2 )).toBe(4);
- });
-  
- test('Todd Test to fail', () => {    
-  expect(functions.assertEquals(2,2 )).toBe(4);
+/* ******************************** Unit Test 2 ****************************************** */
+test('myTest2', () => {
+  expect(functions.assertEquals(2, 2)).toBe(4); //These are assertions
 });

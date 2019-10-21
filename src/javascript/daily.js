@@ -1,4 +1,4 @@
-// import { isModuleDeclaration } from "@babel/types";
+import { isModuleDeclaration } from "@babel/types";
 /*	
 	Write the function that will create this output:
 
@@ -14,8 +14,9 @@
 */
 
 // Write the function after this comment ---
+
 //function? not functions? why?
-//Create an Object containing many function
+//Create an Object containing many functions(S)
 const functions = {
 
     add: (num1, num2) => num1 + num2,
