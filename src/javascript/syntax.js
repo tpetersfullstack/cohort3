@@ -1,5 +1,5 @@
 /*--------------- Copy this section into your code syntax.js as comments --------
-
+//Write Functions here
 define attributes / variables
 number
 string
