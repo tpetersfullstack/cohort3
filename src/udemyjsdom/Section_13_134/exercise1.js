@@ -9,22 +9,30 @@ function q1() {
     alert(a);
 }
 
+//Answer: 3
+
+
 //#2
 var a = 0;
 function q2() {
     a = 5;
 }
 
+//Answer: 5
+
 function q22() {
     alert(a);
 }
 
+//Answer: a is not defined
 
 //#3
+
 function q3() {
     window.a = "hello";
 }
 
+//Answer: a = hello
 
 function q32() {
     alert(a);
@@ -37,6 +45,8 @@ function q4() {
     alert(a);
 }
 
+//Answer: test
+
 //#5
 var a = 2;
 if (true) {
@@ -44,3 +54,5 @@ if (true) {
     alert(a);
 }
 alert(a);
+
+//Answer: 5
