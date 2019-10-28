@@ -1,21 +1,22 @@
 
 const functions = {
-    
-    size: (num) => {
-        if (num < 10) return "small";
-        if (num < 20) return "medium";
-        return "large";
+
+    helloWorld: (wordOne, wordTwo) => {
+        console.log('Hello World from 10_25_tdd.js');
     },
 
-    add: (num1, num2) => {
-        return num1 + num2;
+    sum: (p1, p2) => {                  //Sum function
+        return p1 + p2;
     },
-
-    subtract: (num1, num2) => {
-        return num1 - num2;
-    }
-
-    
+    sub: (p1, p2) => {                  //Sub function
+        return p1 - p2;
+    },
+    mult: (p1, p2) => {                  //Mult function
+        return p1 * p2;
+    },
+    div: (p1, p2) => {                  //Div function
+        return p1 / p2;
+    },
 };
 
 export default functions;
