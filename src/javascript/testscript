@@ -1,8 +1,0 @@
-
-1.) Create the 2 files (myTest.js, myTest.test.js)
-2.) Test for console.log('Hello World');
-3.) Run MPM test console.log
-4.) PSC write function w/console.log('Hello World')
-5.) import/export (PSC)(test)
-6.) run helloworld
-7.) Write stub(name, parameters, dummy return
