@@ -10,17 +10,19 @@ const functions = {
     //     return "";
     // },
 
-    //Write the function makeEmailArr to build email addresses for the company.
+    //Write the function makeEmailArr to build email addresses for the company
     makeEmailArr: (name) => {
         const x = name[0].toLowerCase() + '.' + name[1].toLowerCase() + '@' + 'evolveu' + '.ca';
         //return 0;
         return x;
     },
 };
-//let makeEmailArr = data.fname + '.' + data.lname + '@' + data.company + '.ca';
-
 // and before this comment ---
-//data.foreach(makeEmailArr);
+
+/*	
+	Write the function to format an email based on an object / map
+*/
+
 
 //Create the Stub to make sure the test gets here
 //Then replace with actual code
