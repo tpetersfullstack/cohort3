@@ -16,20 +16,51 @@ const functions = {
         //return 0;
         return x;
     },
+    // Write the function to format an email based on an object / map
+    //Create the Stub to make sure the test gets here, then replace with actual code
+    makeEmailObj: (name) => {
+        //console.log('Hello World from emaiBuilder function');
+        return (name.fname.toLowerCase() + '.' + name.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
+    },
+
 };
+
+//Prepare for Array Work
+// Basics
+// for
+var i;
+for (i = 0; i < 10; i++) {
+    console.log('for loop');
+};
+// while
+let x = 0;
+while (x < 10) {
+    console.log('while loop');
+    x++;
+};
+
+// do while
+let y = 0;
+do {
+    console.log('do while loop');
+    y++;
+}
+while (y < 10);
+
+// Next Level
+// for in
+const forInEx = { fname: 'first', lname: 'last' };
+for (x in forInEx) {
+    console.log('for in loop');
+};
+
+// for of
+var ex = ['Hola', 'Tu', 'Amore'];
+var f;
+for (f of ex) {
+    console.log('for of loop');
+};
+
+
 // and before this comment ---
-
-/*	
-	Write the function to format an email based on an object / map
-*/
-
-
-//Create the Stub to make sure the test gets here
-//Then replace with actual code
-// const functions = {
-//     emailBuilder: (fname, lname) => {
-//         return ('l.shumlich@evolveu.ca');
-//     },
-// };
-
 export default functions;

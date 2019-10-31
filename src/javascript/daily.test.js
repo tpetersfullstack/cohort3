@@ -14,17 +14,18 @@ import functions from './daily.js'    //Tells jest and daily.test.js where to lo
 /*
     Write a function to format an email based on an array.
 */
-test('email builder from an array', () => {
-    const name = ["first", "last"];
-    expect(functions.makeEmailArr(name))
-        .toEqual("first.last@evolveu.ca");
-    expect(functions.makeEmailArr(["First", "Last"]))
-        .toEqual("first.last@evolveu.ca");
-    expect(functions.makeEmailArr(["Bill", "Smith"]))
-        .toEqual("bill.smith@evolveu.ca");
-});
+// test('email builder from an array', () => {
+//     const name = ["first", "last"];
+//     expect(functions.makeEmailArr(name))
+//         .toEqual("first.last@evolveu.ca");
+//     expect(functions.makeEmailArr(["First", "Last"]))
+//         .toEqual("first.last@evolveu.ca");
+//     expect(functions.makeEmailArr(["Bill", "Smith"]))
+//         .toEqual("bill.smith@evolveu.ca");
+// });
 
 test('email builder from an object/map', () => {
+    //console.log("Hello World from daily.test.js");
     const name = { fname: 'first', lname: 'last' };
     expect(functions.makeEmailObj(name))
         .toEqual("first.last@evolveu.ca");
