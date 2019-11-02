@@ -1,5 +1,22 @@
 import { isModuleDeclaration } from "@babel/types";
 
+/* Sample data for the next few exercises. */
+
+const data = {
+    staff: [
+        { fname: "Jane", lname: "Smith", balance: 10 },
+        { fname: "Liam", lname: "Henry", balance: 1000 },
+        { fname: "Emma", lname: "Jones", balance: 1330 },
+        { fname: "Olivia", lname: "Notly", balance: 310 },
+        { fname: "Noah", lname: "Ho", balance: 503 },
+        { fname: "William", lname: "Lee", balance: 520 },
+        { fname: "Benjamin", lname: "Amis", balance: 150 },
+    ],
+    company: "EvolveU",
+    city: "Calgary",
+    prov: "Alberta"
+};
+
 //Create an Object containing many functions
 const functions = {
 
@@ -21,6 +38,13 @@ const functions = {
     makeEmailObj: (name) => {
         //console.log('Hello World from emaiBuilder function');
         return (name.fname.toLowerCase() + '.' + name.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
+    },
+
+	/* Write the function to build email addresses for the company. */
+
+    loopStaff: () => {
+        console.log('Hello World from loopStaff function');
+        //return (name.fname.toLowerCase() + '.' + name.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
     },
 
 };
@@ -60,6 +84,18 @@ var f;
 for (f of ex) {
     console.log('for of loop');
 };
+
+// Read the documentation on the following and create examples of each one:
+
+// slice
+
+// splice
+
+// forEach
+// map
+// reduce
+// filter
+// sort
 
 
 // and before this comment ---

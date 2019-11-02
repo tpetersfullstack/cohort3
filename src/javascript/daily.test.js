@@ -24,13 +24,26 @@ import functions from './daily.js'    //Tells jest and daily.test.js where to lo
 //         .toEqual("bill.smith@evolveu.ca");
 // });
 
-test('email builder from an object/map', () => {
-    //console.log("Hello World from daily.test.js");
-    const name = { fname: 'first', lname: 'last' };
-    expect(functions.makeEmailObj(name))
-        .toEqual("first.last@evolveu.ca");
-    expect(functions.makeEmailObj({ fname: 'First', lname: 'Last' }))
-        .toEqual("first.last@evolveu.ca");
-    expect(functions.makeEmailObj({ fname: "Bill", lname: "Smith" }))
-        .toEqual("bill.smith@evolveu.ca");
+// test('email builder from an object/map', () => {
+//     //console.log("Hello World from daily.test.js");
+//     const name = { fname: 'first', lname: 'last' };
+//     expect(functions.makeEmailObj(name))
+//         .toEqual("first.last@evolveu.ca");
+//     expect(functions.makeEmailObj({ fname: 'First', lname: 'Last' }))
+//         .toEqual("first.last@evolveu.ca");
+//     expect(functions.makeEmailObj({ fname: "Bill", lname: "Smith" }))
+//         .toEqual("bill.smith@evolveu.ca");
+// });
+/*	
+	Write the function to build email addresses for the company.
+*/
+
+test('email builder for company', () => {
+    const staffEmail = functions.loopStaff(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
 });
