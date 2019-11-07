@@ -54,9 +54,30 @@ const functions = {
     //Write a function that will take an array and return an array of emails
     //The new function you are writing today will call makeEmailObj that you have written in a previous exercise.
 
+    // loopStaff: (staff) => {                                     //Accept an Array
+    //     let myLoopEmails = [];                                  //Create a New empty Array to store all the Emails
+    //     functions.makeEmailObj(staff);                          //call the makeEmailObj function and pass in an object
+    //     for (let i = 0; i < staff.length; i++) {                //Get the length of the array, use for loop
+    //                                                             //Where is the String to push on the array?        
+    //         let myLoopEmails = staff[i].push(staff);    //use push
+    //     }                                                       //Did I write makeEmailObj wrong?
+    //     return myLoopEmails;                                 //Return an Array of emails
+    // },
 
+    loopStaff: (staff) => {
+        let staffEmail = [];
+        staff.forEach(function (element) {
+          let emailsEach = functions.makeEmailObj(element);
+          staffEmail.push(emailsEach);
+        });
+        return staffEmail;
+      },
+
+    // makeEmailObj: (myObject) => {
+    //     return (myObject.fname.toLowerCase() + '.' + myObject.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
 
     /* End of loopStaff - October 22, 2019 ****************************************************************************/
+
     /* Beginning of What’s my coverage - October 18, 2019 **************************************************************/
     // Run your coverage report and send the output to Larry as a pdf file. 
     // Follow these steps:
@@ -71,15 +92,15 @@ const functions = {
     //Read the documentation on the following and create examples of each one:
     // slice
     mySlice: () => {
-       var mySliceArr = [1, 2, 3, 4 ,5];
-       const mySliceArrRet = mySliceArr.slice(3);
-       return mySliceArrRet;
+        var mySliceArr = [1, 2, 3, 4, 5];
+        const mySliceArrRet = mySliceArr.slice(3);
+        return mySliceArrRet;
     },
     // splice
     mySplice: () => {
         var mySpliceArr = [1, 2, 3, 4, 5];
         const mySpliceArrRet = mySpliceArr.splice(1, 0, 6);
-        return mySpliceArr; 
+        return mySpliceArr;
     },
     // forEach
     myForEach: () => {
@@ -94,9 +115,9 @@ const functions = {
     },
     // map
     myMap: () => {
-     var myMapArr = [1, 2, 3, 4, 5];
-     const myMapArrRet = myMapArr.map(dave => dave * 2);
-     return myMapArrRet;
+        var myMapArr = [1, 2, 3, 4, 5];
+        const myMapArrRet = myMapArr.map(dave => dave * 2);
+        return myMapArrRet;
     },
     // reduce
     myReduce: () => {
@@ -176,7 +197,9 @@ const functions = {
     // Write a function that will receive an object / map. Create an evolveu email from the object
     // Write the function to format an email based on an object / map
     makeEmailObj: (myObject) => {
-        return (myObject.fname.toLowerCase() + '.' + myObject.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
+
+        let myNewMakeEmailObj = myObject.fname + '.' + myObject.lname + '@' + 'evolveu' + '.ca'; //Returns a string
+       return myNewMakeEmailObj.toLowerCase();
     },
     /* End of makeEmailObj - Oct 11, 2019 **************************************************************/
     /* Beginning of makeEmailArr - October 9, 2019 *****************************************************/
