@@ -67,11 +67,11 @@ const functions = {
     loopStaff: (staff) => {
         let staffEmail = [];
         staff.forEach(function (element) {
-          let emailsEach = functions.makeEmailObj(element);
-          staffEmail.push(emailsEach);
+            let emailsEach = functions.makeEmailObj(element);
+            staffEmail.push(emailsEach);
         });
         return staffEmail;
-      },
+    },
 
     // makeEmailObj: (myObject) => {
     //     return (myObject.fname.toLowerCase() + '.' + myObject.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
@@ -199,7 +199,7 @@ const functions = {
     makeEmailObj: (myObject) => {
 
         let myNewMakeEmailObj = myObject.fname + '.' + myObject.lname + '@' + 'evolveu' + '.ca'; //Returns a string
-       return myNewMakeEmailObj.toLowerCase();
+        return myNewMakeEmailObj.toLowerCase();
     },
     /* End of makeEmailObj - Oct 11, 2019 **************************************************************/
     /* Beginning of makeEmailArr - October 9, 2019 *****************************************************/
@@ -241,14 +241,12 @@ const functions = {
     assertEquals: (num1, num2) => {
         if (num1 == num2) {
             return true;
-        } else if (num1 != num2) {
+        } else (num1 != num2) {
             console.log('the two values are not the same');
             console.log('p1-->' + num1)
             console.log('p2-->' + num2)
             return false;
         }
-        console.log("In assertEquals");
-        return "";
     },
     /* End of AssertEquals - October 7, 2019 *****************************************************/
 };
