@@ -47,9 +47,21 @@ const functions = {
     //Do the same assignment as the last one using the two forms of the “for” statement
     //Create your own tests but use the function names that are provided below.
 
+    // loopStaffIn: (staff) => {
 
-    /* End ofloopStaff: in / of - October 24, 2019 *****************************************************************/
+    // };
 
+
+    loopStaffOf: (staff) => {
+        let stafflSO = [];
+        for (const element of staff) {
+            let emailslSO = functions.makeEmailObj(element);       //Call the makeEmailObj function, passing in each element of the staff array
+            stafflSO.push(emailslSO);
+        }
+        return stafflSO;
+    },
+
+    /* End ofloopStaff: in / of - October 24, 2019 *********************************************************************/
     /* Beginning of loopStaff - October 22, 2019 ***********************************************************************/
     //Write a function that will take an array and return an array of emails
     //The new function you are writing today will call makeEmailObj that you have written in a previous exercise.
@@ -59,25 +71,20 @@ const functions = {
     //     functions.makeEmailObj(staff);                          //call the makeEmailObj function and pass in an object
     //     for (let i = 0; i < staff.length; i++) {                //Get the length of the array, use for loop
     //                                                             //Where is the String to push on the array?        
-    //         let myLoopEmails = staff[i].push(staff);    //use push
+    //         let myLoopEmails = staff[i].push(staff);             //use push
     //     }                                                       //Did I write makeEmailObj wrong?
-    //     return myLoopEmails;                                 //Return an Array of emails
+    //     return myLoopEmails;                                     //Return an Array of emails
     // },
 
-    loopStaff: (staff) => {
-        let staffEmail = [];
-        staff.forEach(function (element) {
-          let emailsEach = functions.makeEmailObj(element);
-          staffEmail.push(emailsEach);
+    loopStaff: (staff) => {                                         //Accept an Array
+        let staffEmail = [];                                        //Create a New empty Array to store the Emails
+        staff.forEach(function (element) {                          //For each element in the staff array
+            let emailsEach = functions.makeEmailObj(element);       //Call the makeEmailObj function, passing in each element of the staff array
+            staffEmail.push(emailsEach);                            //Store each email created by the makeEmailObj in emailsEach, then push them on to the new array
         });
-        return staffEmail;
-      },
-
-    // makeEmailObj: (myObject) => {
-    //     return (myObject.fname.toLowerCase() + '.' + myObject.lname.toLowerCase() + '@' + 'evolveu' + '.ca');
-
-    /* End of loopStaff - October 22, 2019 ****************************************************************************/
-
+        return staffEmail;                                          //Return the new array with all the completed email addresses
+    },
+    /* End of loopStaff - October 22, 2019 *****************************************************************************/
     /* Beginning of What’s my coverage - October 18, 2019 **************************************************************/
     // Run your coverage report and send the output to Larry as a pdf file. 
     // Follow these steps:
@@ -199,7 +206,7 @@ const functions = {
     makeEmailObj: (myObject) => {
 
         let myNewMakeEmailObj = myObject.fname + '.' + myObject.lname + '@' + 'evolveu' + '.ca'; //Returns a string
-       return myNewMakeEmailObj.toLowerCase();
+        return myNewMakeEmailObj.toLowerCase();
     },
     /* End of makeEmailObj - Oct 11, 2019 **************************************************************/
     /* Beginning of makeEmailArr - October 9, 2019 *****************************************************/
@@ -247,7 +254,7 @@ const functions = {
             console.log('p2-->' + num2)
             return false;
         }
-            },
+    },
     /* End of AssertEquals - October 7, 2019 *****************************************************/
 };
 export default functions;

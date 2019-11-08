@@ -18,11 +18,25 @@ const data = {
 };
 
 /* Beginning of loopStaff: in / of Testing - October 24, 2019 ***************************************************************/
+test('loopStaffIn', () => {
+    const staffEmail = functions.loopStaffIn(data.staff);
+    // Write your tests here
+    expect(loopStaffIn).toEqual();
+
+});
+
+test('loopStaffOf', () => {
+    const staffEmail = functions.loopStaffOf(data.staff);
+    // Write your tests here
+    expect(loopStaffOf).toEqual();
+
+});
+
 
 
 /* End ofloopStaff: in / of Testing - October 24, 2019 *****************************************************************/
 /* Beginning of loopStaff Testing - October 22, 2019 ***********************************************************************/
-test('email builder for company', () => {
+test('loopStaff', () => {
     const staffEmail = functions.loopStaff(data.staff);
     expect(staffEmail[0])
         .toEqual("jane.smith@evolveu.ca");
@@ -37,12 +51,12 @@ test('email builder for company', () => {
 /* Begin More Array Work Testing - October 16-17 ************************************************************************/
 // slice
 test('slice', () => {
-   expect(functions.mySlice()).toEqual([4, 5]);
+    expect(functions.mySlice()).toEqual([4, 5]);
 }),
-// splice
-test('splice', () => {
-    expect(functions.mySplice()).toEqual([1, 6, 2, 3, 4, 5]);
-});
+    // splice
+    test('splice', () => {
+        expect(functions.mySplice()).toEqual([1, 6, 2, 3, 4, 5]);
+    });
 // forEach
 test('forEach', () => {
     expect(functions.myForEach(["Jane", "Liam", "Emma", "Olivia", "Noah", "William", "Benjamin"])).toEqual(["Jane", "Liam", "Emma", "Olivia", "Noah", "William", "Benjamin"]);
@@ -53,15 +67,15 @@ test('map', () => {
 });
 //reduce
 test('reduce', () => {
-expect(functions.myReduce()).toEqual(15);
+    expect(functions.myReduce()).toEqual(15);
 });
 // filter
 test('filter', () => {
-     expect(functions.myFilter()).toEqual([4, 5]);
+    expect(functions.myFilter()).toEqual([4, 5]);
 });
 // sort
 test('sort', () => {
-expect(functions.mySort()).toEqual([ 'Benjamin', 'Emma', 'Jane', 'Liam', 'Noah', 'Olivia', 'William' ]);
+    expect(functions.mySort()).toEqual(['Benjamin', 'Emma', 'Jane', 'Liam', 'Noah', 'Olivia', 'William']);
 });
 /* End More Array Work Testing - October 16-17 ************************************************************************/
 /* Begin Prepare for Array Work - October 15, 2019 tests**********************************************************/
@@ -104,10 +118,10 @@ test('email builder from an array', () => {
 });
 //End makeEmailArr Tests - October 9, 2019 *******************************************************************/
 //Begin AssertEquals Tests- October 7, 2019 *****************************************************************/
-test('expectEquals1', () => {
+test('assertEquals1', () => {
     expect(functions.assertEquals(2, 2)).toBe(true); //These are assertions
 });
-test('expectEquals2', () => {
+test('assertEquals2', () => {
     expect(functions.assertEquals(2, 1)).toBe(false); //These are assertions
 });
 //End AssertEquals Tests- October 7, 2019 *****************************************************************/
