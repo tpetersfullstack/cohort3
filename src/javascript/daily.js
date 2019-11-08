@@ -79,8 +79,8 @@ const functions = {
     loopStaff: (staff) => {                                         //Accept an Array
         let staffEmail = [];                                        //Create a New empty Array to store the Emails
         staff.forEach(function (element) {                          //For each element in the staff array
-            let emailsEach = functions.makeEmailObj(element);       //Call the makeEmailObj function, passing in each element of the staff array
-            staffEmail.push(emailsEach);                            //Store each email created by the makeEmailObj in emailsEach, then push them on to the new array
+            let CompEmail = functions.makeEmailObj(element);       //Call the makeEmailObj function, passing in each element of the staff array
+            staffEmail.push(CompEmail);                            //Store each email created by the makeEmailObj in emailsEach, then push them on to the new array
         });
         return staffEmail;                                          //Return the new array with all the completed email addresses
     },

@@ -17,25 +17,30 @@ const data = {
     prov: "Alberta"
 };
 
-/* Beginning of loopStaff: in / of Testing - October 24, 2019 ***************************************************************/
+/* Beginning of loopStaff: in / of Testing - October 24, 2019 *********************************************************/
 test('loopStaffIn', () => {
     const staffEmail = functions.loopStaffIn(data.staff);
     // Write your tests here
-    expect(loopStaffIn).toEqual();
-
+    expect(loopStaffIn[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(loopStaffIn[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(loopStaffIn[6])
+        .toEqual("benjamin.amis@evolveu.ca");
 });
 
 test('loopStaffOf', () => {
     const staffEmail = functions.loopStaffOf(data.staff);
     // Write your tests here
-    expect(loopStaffOf).toEqual();
-
+    expect(loopStaffOf[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(loopStaffOf[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(loopStaffOf[6])
+        .toEqual("benjamin.amis@evolveu.ca");
 });
-
-
-
-/* End ofloopStaff: in / of Testing - October 24, 2019 *****************************************************************/
-/* Beginning of loopStaff Testing - October 22, 2019 ***********************************************************************/
+/* End ofloopStaff: in / of Testing - October 24, 2019 ***************************************************************/
+/* Beginning of loopStaff Testing - October 22, 2019 *****************************************************************/
 test('loopStaff', () => {
     const staffEmail = functions.loopStaff(data.staff);
     expect(staffEmail[0])
@@ -45,10 +50,10 @@ test('loopStaff', () => {
     expect(staffEmail[6])
         .toEqual("benjamin.amis@evolveu.ca");
 });
-/* End of loopStaff Testing - October 22, 2019 ****************************************************************************/
-/* Begin What’s my coverage Testing - October 18, 2019 *****************************************************************/
-/* End What’s my coverage Testing - October 18, 2019 *******************************************************************/
-/* Begin More Array Work Testing - October 16-17 ************************************************************************/
+/* End of loopStaff Testing - October 22, 2019 ***********************************************************************/
+/* Begin What’s my coverage Testing - October 18, 2019 ***************************************************************/
+/* End What’s my coverage Testing - October 18, 2019 *****************************************************************/
+/* Begin More Array Work Testing - October 16-17 *********************************************************************/
 // slice
 test('slice', () => {
     expect(functions.mySlice()).toEqual([4, 5]);
@@ -77,8 +82,8 @@ test('filter', () => {
 test('sort', () => {
     expect(functions.mySort()).toEqual(['Benjamin', 'Emma', 'Jane', 'Liam', 'Noah', 'Olivia', 'William']);
 });
-/* End More Array Work Testing - October 16-17 ************************************************************************/
-/* Begin Prepare for Array Work - October 15, 2019 tests**********************************************************/
+/* End More Array Work Testing - October 16-17 ******************************************************************/
+/* Begin Prepare for Array Work - October 15, 2019 tests*********************************************************/
 test('for of', () => {
     expect(functions.myForOf()).toEqual('HolaTuAmore');
 });
@@ -106,7 +111,7 @@ test('email builder from an object / map', () => {
         .toEqual("bill.smith@evolveu.ca");
 });
 /* End makeEmailObj tests - Oct 11, 2019 ***********************************************************************/
-//Begin makeEmailArr Tests - October 9, 2019 *******************************************************************/
+/* Begin makeEmailArr Tests - October 9, 2019 ******************************************************************/
 test('email builder from an array', () => {
     const name = ["first", "last"];
     expect(functions.makeEmailArr(name))
@@ -116,12 +121,12 @@ test('email builder from an array', () => {
     expect(functions.makeEmailArr(["Bill", "Smith"]))
         .toEqual("bill.smith@evolveu.ca");
 });
-//End makeEmailArr Tests - October 9, 2019 *******************************************************************/
-//Begin AssertEquals Tests- October 7, 2019 *****************************************************************/
+/* End makeEmailArr Tests - October 9, 2019 ********************************************************************/
+/* Begin AssertEquals Tests - October 7, 2019 ******************************************************************/
 test('assertEquals1', () => {
     expect(functions.assertEquals(2, 2)).toBe(true); //These are assertions
 });
 test('assertEquals2', () => {
     expect(functions.assertEquals(2, 1)).toBe(false); //These are assertions
 });
-//End AssertEquals Tests- October 7, 2019 *****************************************************************/
+/* End AssertEquals Tests- October 7, 2019 *********************************************************************/
