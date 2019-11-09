@@ -26,29 +26,43 @@ const functions = {
 
 
 
-    /* End of November 5, 2019 *****************************************************************************************/
-
+    /* End of November 5, 2019 *********************************************************************************************/
     /* Beginning of More Array Exercises - October 29, 2019 ****************************************************************/
+    // Use only the JavaScript built-in functions listed below to complete this exercise. Make sure you write your tests first.
+
+    // write a function to receive the same array (staff) and return the total of balances
+    // write a function to receive the same array (staff) and return the average the balances
+
+    // Understand the documentation. Now that we have a few arrays, let’s practice using the following:
 
 
 
-    /* End of More Array Exercises - October 29, 2019 ****************************************************************/
-
-    /* Beginning of loopStaff each / map - October 25, 2019 ************************************************************/
+    /* End of More Array Exercises - October 29, 2019 ********************************************************************/
+    /* Beginning of loopStaff each / map - October 25, 2019 **************************************************************/
     // Do the same assignment again, but this time use callback functions
     // Use the ‘forEach’ and ‘map’ built-in functions    
     loopStaffForEach: (staff) => {
         //return '0';
-},
+        let staffEmailFE = [];
+        staff.forEach(function (element) {
+            let CompEmailFE = functions.makeEmailObj(element);
+            staffEmailFE.push(CompEmailFE);
+        });
+        return staffEmailFE;
+    },
     loopStaffMap: (staff) => {
         //return '0';
-
+        let staffEmailM = [];
+        staff.map(function (element) {
+            let CompEmailM = functions.makeEmailObj(element);
+            staffEmailM.push(CompEmailM);
+        });
+        return staffEmailM;
     },
     /* End of loopStaff each / map - October 25, 2019 ******************************************************************/
     /* Beginning ofloopStaff: in / of - October 24, 2019 ***************************************************************/
     //Do the same assignment as the last one using the two forms of the “for” statement
     //Create your own tests but use the function names that are provided below.
-
     loopStaffIn: (staff) => {
         let staffIn = [];
         for (const element in staff) {
@@ -79,7 +93,6 @@ const functions = {
     //     }                                                       //Did I write makeEmailObj wrong?
     //     return myLoopEmails;                                     //Return an Array of emails
     // },
-
     loopStaff: (staff) => {                                         //Accept an Array
         let staffEmail = [];                                        //Create a New empty Array to store the Emails
         staff.forEach(function (element) {                          //For each element in the staff array

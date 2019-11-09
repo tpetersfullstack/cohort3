@@ -16,35 +16,39 @@ const data = {
     city: "Calgary",
     prov: "Alberta"
 };
+/* Beginning of November 5 Testing, 2019 *****************************************************************************************/
 
+
+/* End of November 5 Testing, 2019 *****************************************************************************************/
+/* Beginning of More Array Testing - October 29, 2019 ****************************************************************/
+
+
+
+/* End of More Array Testing - October 29, 2019 ****************************************************************/
 /* Beginning of loopStaff each / map Testing - October 25, 2019 ***************************************************************/
-test ('loopStaffForEach', () => {
-const staffEmail = functions.loopStaffForEach(data.staff);
-
-// expect(staffEmail[0])
-// .toEqual('0');
-// Write your tests here
-expect(staffEmail[0])
-.toEqual("jane.smith@evolveu.ca");
-expect(staffEmail[3])
-.toEqual("olivia.notly@evolveu.ca");
-expect(staffEmail[6])
-.toEqual("benjamin.amis@evolveu.ca");
+test('loopStaffForEach', () => {
+    const staffEmail = functions.loopStaffForEach(data.staff);
+    // expect(staffEmail[0])
+    // .toEqual('0');
+    // Write your tests here
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
 });
-
-test ('loopStaffMap', () => {
-const staffEmail = functions.loopStaffMap(data.staff);
-
-// expect(staffEmail[0])
-// .toEqual('0');
-
-// Write your tests here
-expect(staffEmail[0])
-.toEqual("jane.smith@evolveu.ca");
-expect(staffEmail[3])
-.toEqual("olivia.notly@evolveu.ca");
-expect(staffEmail[6])
-.toEqual("benjamin.amis@evolveu.ca");
+test('loopStaffMap', () => {
+    const staffEmail = functions.loopStaffMap(data.staff);
+    // expect(staffEmail[0])
+    // .toEqual('0');
+    // Write your tests here
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[3])
+        .toEqual("olivia.notly@evolveu.ca");
+    expect(staffEmail[6])
+        .toEqual("benjamin.amis@evolveu.ca");
 });
 /* End of loopStaff each / map Testing - October 25, 2019 *********************************************************************/
 /* Beginning of loopStaff: in / of Testing - October 24, 2019 *********************************************************/
