@@ -21,9 +21,24 @@ const data = {
 
 /* End of November 5 Testing, 2019 *****************************************************************************************/
 /* Beginning of More Array Testing - October 29, 2019 ****************************************************************/
-
-
-
+test('totalOfBalances', () => {
+    //const staffEmail = functions.totalOfBalances(data.staff);
+    // expect(staffEmail[0])
+    // .toEqual('0');
+    // Write your tests here
+    //test('totalOfBalances', () => {
+    const staffTotal = functions.totalBalances(data.staff);
+    expect(staffTotal).toEqual(3823)
+});
+test('averageOfBalances', () => {
+    //const staffEmail = functions.averageOfBalances(data.staff);
+    // expect(staffEmail[0])
+    // .toEqual('0');
+    // Write your tests here
+    // test('averageOfBalances', () => {
+    const staffAverage = functions.avgBalances(data.staff);
+    expect(staffAverage).toEqual(546)
+});
 /* End of More Array Testing - October 29, 2019 ****************************************************************/
 /* Beginning of loopStaff each / map Testing - October 25, 2019 ***************************************************************/
 test('loopStaffForEach', () => {

@@ -34,9 +34,26 @@ const functions = {
     // write a function to receive the same array (staff) and return the average the balances
 
     // Understand the documentation. Now that we have a few arrays, let’s practice using the following:
-
-
-
+    totalOfBalances: (staff) => {
+        //return '0';
+        var initialValue = 0;
+        var totalOfBal = staff.reduce(
+            (accumulator, initialValue) => accumulator + initialValue,
+            0
+        );
+        return totalOfBal;
+    },
+    averageOfBalances: (staff) => {
+        //return '0';
+        var initialValue = 0;
+        var sSum;
+        var sLen = staff.length;
+        var totalOfBal = staff.reduce(
+            (accumulator, initialValue) => accumulator + initialValue,
+            0
+        );
+        return totalOfBal / sLen;
+    },
     /* End of More Array Exercises - October 29, 2019 ********************************************************************/
     /* Beginning of loopStaff each / map - October 25, 2019 **************************************************************/
     // Do the same assignment again, but this time use callback functions
