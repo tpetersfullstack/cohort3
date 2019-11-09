@@ -19,10 +19,10 @@ const data = {
 const functions = {
 
     /* Beginning of November 5, 2019 *****************************************************************************************/
-    //Do not start this exercise on your own
-    //This will be a team exercise that we will do together
-    //In your src/javascript directory create a file called reference.test.js and paste this into it
-    //Do not run it until we look at what it’s doing
+    // Do not start this exercise on your own
+    // This will be a team exercise that we will do together
+    // In your src/javascript directory create a file called reference.test.js and paste this into it
+    // Do not run it until we look at what it’s doing
 
 
 
@@ -35,23 +35,28 @@ const functions = {
     /* End of More Array Exercises - October 29, 2019 ****************************************************************/
 
     /* Beginning of loopStaff each / map - October 25, 2019 ************************************************************/
-    //Do the same assignment again, but this time use callback functions
-    //Use the ‘forEach’ and ‘map’ built-in functions
+    // Do the same assignment again, but this time use callback functions
+    // Use the ‘forEach’ and ‘map’ built-in functions    
+    loopStaffForEach: (staff) => {
+        //return '0';
+},
+    loopStaffMap: (staff) => {
+        //return '0';
 
-
-
-
+    },
     /* End of loopStaff each / map - October 25, 2019 ******************************************************************/
-
     /* Beginning ofloopStaff: in / of - October 24, 2019 ***************************************************************/
     //Do the same assignment as the last one using the two forms of the “for” statement
     //Create your own tests but use the function names that are provided below.
 
-    // loopStaffIn: (staff) => {
-
-    // };
-
-
+    loopStaffIn: (staff) => {
+        let staffIn = [];
+        for (const element in staff) {
+            let emailsIn = functions.makeEmailObj(staff[element]);       //Call the makeEmailObj function, passing in each element of the staff array
+            staffIn.push(emailsIn);
+        };
+        return staffIn;
+    },
     loopStaffOf: (staff) => {
         let stafflSO = [];
         for (const element of staff) {
@@ -60,7 +65,6 @@ const functions = {
         }
         return stafflSO;
     },
-
     /* End ofloopStaff: in / of - October 24, 2019 *********************************************************************/
     /* Beginning of loopStaff - October 22, 2019 ***********************************************************************/
     //Write a function that will take an array and return an array of emails
