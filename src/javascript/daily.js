@@ -52,7 +52,7 @@ const functions = {
             (accumulator, initialValue) => accumulator + initialValue,
             0
         );
-        return totalOfBal / sLen;
+        return totalOfBal/sLen;
     },
     /* End of More Array Exercises - October 29, 2019 ********************************************************************/
     /* Beginning of loopStaff each / map - October 25, 2019 **************************************************************/
