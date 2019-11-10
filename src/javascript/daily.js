@@ -63,59 +63,53 @@ const people = [
 ];
 /* ************************************************************************************************************************ */
 const functions = {
-/* Beginning of Callback Exercise (Part 1) - November 8, 2019*************************************************************/
-/* Now that you understand how to use a callback let’s start writing one. This may bend your mind just a little but it’s a good learning experience.
-// Hypothetically; You are working for a private company who looks after demographics of people living in BC and Alberta only.  The data you received is from the 4 Western provinces. You want to write a generalized function that loops through the data and only does a “callback” for the people from BC or Alberta.
+    /* Beginning of Callback Exercise (Part 1) - November 8, 2019*************************************************************/
+    /* Now that you understand how to use a callback let’s start writing one. This may bend your mind just a little but it’s a good learning experience.
+    // Hypothetically; You are working for a private company who looks after demographics of people living in BC and Alberta only.  The data you received is from the 4 Western provinces. You want to write a generalized function that loops through the data and only does a “callback” for the people from BC or Alberta.
+    
+    // Write two functions:
+    // a generic function to process all of the people from the Western 4 provinces and only “callback” for people from BC or Alberta.  This is a generic function that will be used over and over again. How will we test this?
+    // a function that will be the “callback” function that will create an array of full names (first and last together). How will we test this?
+    
+    Your tests should ensure each function works on it’s own and then that they work properly together.
+    
+    Watch the following youtube video for assistance in working through this exercise:
+    
+    This video explains one of the many uses of callbacks. It also starts to introduce the concepts of timing, sync / async processing.*/
+    /* End of Callback Exercise (Part 1) - November 8, 2019*************************************************************/
 
-// Write two functions:
-// a generic function to process all of the people from the Western 4 provinces and only “callback” for people from BC or Alberta.  This is a generic function that will be used over and over again. How will we test this?
-// a function that will be the “callback” function that will create an array of full names (first and last together). How will we test this?
-
-Your tests should ensure each function works on it’s own and then that they work properly together.
-
-Watch the following youtube video for assistance in working through this exercise:
-
-This video explains one of the many uses of callbacks. It also starts to introduce the concepts of timing, sync / async processing.*/
-/* End of Callback Exercise (Part 1) - November 8, 2019*************************************************************/
-
-/* Beginning of More Array Exercises (Really) - November 6, 2019 *********************************************************/
+    /* Beginning of More Array Exercises (Really) - November 6, 2019 *********************************************************/
     // Using one of the callback functions we researched in the last exercise (but may have not used previously)
     // create a new array for balances >= 1000 from the staff data
 
-/* End of More Array Exercises (Really) - November 6, 2019 *********************************************************/
-/* Beginning of November 5 Excercise, 2019 *****************************************************************************************/
+    /* End of More Array Exercises (Really) - November 6, 2019 *********************************************************/
+    /* Beginning of November 5 Excercise, 2019 *****************************************************************************************/
     // Do not start this exercise on your own
     // This will be a team exercise that we will do together
     // In your src/javascript directory create a file called reference.test.js and paste this into it
     // Do not run it until we look at what it’s doing
 
-/* End of November 5 Excercise, 2019 *****************************************************************************************/
-/* Beginning of More Array Exercises - October 29, 2019 ****************************************************************/
+    /* End of November 5 Excercise, 2019 *****************************************************************************************/
+    /* Beginning of More Array Exercises - October 29, 2019 ****************************************************************/
     // Use only the JavaScript built-in functions listed below to complete this exercise. Make sure you write your tests first.
-
     // write a function to receive the same array (staff) and return the total of balances
     // write a function to receive the same array (staff) and return the average the balances
-
-    // Understand the documentation. Now that we have a few arrays, let’s practice using the following:
     totalOfBalances: (staff) => {
-        //return '0';
-        var initialValue = 0;
-        var totalOfBal = staff.reduce(
-            (accumulator, initialValue) => accumulator + initialValue,
-            0
-        );
+        let allBalances = [];
+        for (let i in staff) {
+            allBalances.push(staff[i].balance);
+        }
+        let totalOfBal = allBalances.reduce((accumulator, initialValue) => accumulator + initialValue);
         return totalOfBal;
     },
     averageOfBalances: (staff) => {
-        //return '0';
-        var initialValue = 0;
-        var sSum;
-        var sLen = staff.length;
-        var totalOfBal = staff.reduce(
-            (accumulator, initialValue) => accumulator + initialValue,
-            0
-        );
-        return totalOfBal / sLen;
+        let avgSum = [];
+        for (let i in staff) {
+            avgSum.push(staff[i].balance);
+        }
+        let myAvgSum = avgSum.reduce((accumulator, initialValue) => accumulator + initialValue);
+        let arrCount = staff.length;
+        return Math.round(myAvgSum/arrCount);
     },
     /* End of More Array Exercises - October 29, 2019 ********************************************************************/
     /* Beginning of loopStaff each / map - October 25, 2019 **************************************************************/
