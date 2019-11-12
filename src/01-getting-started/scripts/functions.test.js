@@ -26,13 +26,13 @@ import functions from './functions'
 //     expect(functions.div(100,5)).toBe(20);
 // });
 /* *********************************************** Canadian Tax Calculator *********************************************************/
-
 test('Tax Calculator', () => {
     //expect(functions.cndTaxCalc(0)).toEqual(0);
     expect(functions.cndTaxCalc(1)).toEqual(0.15);
     expect(functions.cndTaxCalc(2)).toEqual(0.30);
-//     expect(functions.cndTaxCalc(0)).toEqual("small");
-//     expect(functions.cndTaxCalc(10)).toEqual("medium");
-//     expect(functions.cndTaxCalc(15)).toEqual("medium");
-//     expect(functions.cndTaxCalc(20)).toEqual("large");
+    expect(functions.cndTaxCalc(50000)).toEqual(7630.85);
+    expect(functions.cndTaxCalc(100000)).toEqual(18140.66);
+    //expect(functions.cndTaxCalc(150000)).toEqual(31211.57);
+    //expect(functions.cndTaxCalc(250000)).toEqual(61796.57)
 });
+/* *********************************************************************************************************************************/
