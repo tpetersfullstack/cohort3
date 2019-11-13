@@ -109,7 +109,7 @@ const functions = {
         }
         let myAvgSum = avgSum.reduce((accumulator, initialValue) => accumulator + initialValue);
         let arrCount = staff.length;
-        return Math.round(myAvgSum/arrCount);
+        return Math.round(myAvgSum / arrCount);
     },
     /* End of More Array Exercises - October 29, 2019 ********************************************************************/
     /* Beginning of loopStaff each / map - October 25, 2019 **************************************************************/
