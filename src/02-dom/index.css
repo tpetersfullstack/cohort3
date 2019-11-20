@@ -1,0 +1,52 @@
+ .classParent {
+
+    border: solid;
+    text-align: center;
+    margin: 40px;
+    margin-left: 30px;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: azure;
+    box-sizing: border-box;
+} 
+
+.classLeftMain {
+
+    border: 2px solid black;
+    text-align: center;
+    margin: 40px;
+    /* margin-left: 30px; */
+    margin: 0 auto ;
+    float: left;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: azure;
+} 
+
+.classRight1 {
+
+    border: solid;
+    text-align: center;
+    margin: 40px;
+    /* margin-left: 30px; */
+    float: right;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: azure;
+} 
+
+.classRight2 {
+
+    border: solid;
+    text-align: center;
+    margin: 40px;
+    /* margin-left: 30px; */
+    float: right;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: azure;
+} 
