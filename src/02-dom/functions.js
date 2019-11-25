@@ -1,10 +1,9 @@
+/* jshint undef: true, unused: true */
+/* globals MY_GLOBAL */
+
 const functions = {
 
-    dummy: () => {
-        console.log("Hello from functions.js");
-    },
-
-    myAddFunction: () => {
+   myAddFunction: () => {
         var node = document.createElement("LI");                        //First create an LI node
         var textnode = document.createTextNode("Water");                //then create a Text node
         node.appendChild(textnode);                                     //then append the Text node to the LI node

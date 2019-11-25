@@ -1,3 +1,5 @@
+/* jshint undef: true, unused: true */
+/* globals MY_GLOBAL */
 import functions from "./functions.js";
 
 test("my dom test 1", () => {
