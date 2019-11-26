@@ -43,17 +43,17 @@ Create Card Function
     let buttonAddBefore = document.createElement("button");
     buttonAddBefore.setAttribute("class", "classAddBeforeButton");
     buttonAddBefore.textContent = "Add Before";
-    newAcct.appendChild(buttonAddBefore);
+    newCard.appendChild(buttonAddBefore);
 
     let buttonAddAfter = document.createElement("button");
     buttonAddAfter.setAttribute("class", "classAddAfterButton");
     buttonAddAfter.textContent = "Add After";
-    newAcct.appendChild(buttonAddAfter);
+    newCard.appendChild(buttonAddAfter);
 
     let buttonDelete = document.createElement("button");
     buttonDelete.setAttribute("class", "classDeleteButton");
     buttonDelete.textContent = "Delete";
-    newAcct.appendChild(buttonDelete);
+    newCard.appendChild(buttonDelete);
   }
 };
 
