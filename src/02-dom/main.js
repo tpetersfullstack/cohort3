@@ -38,21 +38,22 @@ idOrderedList.addEventListener("show", () => {
 Working with Cards
 */
 idButtonAddCard.addEventListener("click", () => {
-    console.log("Add Card Event Listener");
+    console.log("In Add Card");
+    functions.addCardFunction();                                //Call addCardFunction
     console.log(event.target);
 });
 
-// idOrderedList.addEventListener("show", () => {
-//     console.log("In OL Event Listener");
+// idButtonInsertBefore.addEventListener("click", () => {
+//     console.log("In Insert Before");
 //     console.log(event.target);
 // });
 
-// idOrderedList.addEventListener("show", () => {
-//     console.log("In OL Event Listener");
+// idButtonInsertAfter.addEventListener("click", () => {
+//     console.log("In Insert After");
 //     console.log(event.target);
 // });
 
-// idOrderedList.addEventListener("show", () => {
-//     console.log("In OL Event Listener");
+// idOrderedList.addEventListener("click", () => {
+//     console.log("In Delete");
 //     console.log(event.target);
 // });
