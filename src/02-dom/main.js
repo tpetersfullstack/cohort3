@@ -15,45 +15,48 @@ use css classes
 import functions from "./functions.js";
 
 idButtonShow.addEventListener("click", () => {
-    console.log("In Show Button Event Listener");
-    console.log(event.target);
-    functions.showButtonFunction();
+  console.log("In Show Button Event Listener");
+  console.log(event.target);
+  functions.showButtonFunction();
 });
 
-idButtonAdd.addEventListener('click', () => {    
-    console.log('In Add Button Event Listener');
-    functions.myAddFunction();
+idButtonAdd.addEventListener("click", () => {
+  console.log("In Add Button Event Listener");
+  functions.myAddFunction();
 });
 
-idParent.addEventListener('click', () => {
-    console.log('In Parent div Event Listener');
-    console.log(event.target);
+idParent.addEventListener("click", () => {
+  console.log("In Parent div Event Listener");
+  console.log(event.target);
 });
 //show?
 idOrderedList.addEventListener("show", () => {
-    console.log("In OL Event Listener");
-    console.log(event.target);
+  console.log("In OL Event Listener");
+  console.log(event.target);
 });
 /*
 Working with Cards
 */
 idButtonAddCard.addEventListener("click", () => {
-    console.log("In Add Card");
-    functions.addCardFunction();                                //Call addCardFunction
+  console.log("In Add Card");
+  functions.addCardFunction(); //Call addCardFunction
+  console.log(event.target);
+});
+
+idButtonInsertBefore.addEventListener("click", () => {
+    console.log("In Insert Before");
     console.log(event.target);
 });
 
-// idButtonInsertBefore.addEventListener("click", () => {
-//     console.log("In Insert Before");
-//     console.log(event.target);
-// });
+idButtonInsertAfter.addEventListener("click", () => {
+    console.log("In Insert After");
+    console.log(event.target);
+});
 
-// idButtonInsertAfter.addEventListener("click", () => {
-//     console.log("In Insert After");
-//     console.log(event.target);
-// });
+//This is not an id
+idDeleteButton.addEventListener("click", () => {
+  console.log("In Delete");
+  console.log(event.target);
+  functions.deleteCardFunction("card");
+});
 
-// idOrderedList.addEventListener("click", () => {
-//     console.log("In Delete");
-//     console.log(event.target);
-// });
