@@ -67,7 +67,8 @@ const functions = {
 
   deleteCard: (currentCard) => {
     currentCard.remove();
-  }
+  },
+
 };
 
 export default functions;

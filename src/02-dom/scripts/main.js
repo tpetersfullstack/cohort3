@@ -1,4 +1,7 @@
-import * as functions from './functions.js';
+//What is * ?
+//import * as functions from './functions.js';
+
+import functions from "./functions.js";
 
 /* Working With Cards Assignment: Todd Peters 11-24-19 */
 
