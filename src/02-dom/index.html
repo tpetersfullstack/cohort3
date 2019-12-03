@@ -1,48 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <title>DOM Exercise</title>
-  </head>
-
-  <body>
-    <!-- The Basic DOM Section -->
-    <div id="idContainer">
-      <h1>Basic DOM</h1>
-      <ol id="idList">
-        This is a list of stuff
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-      </ol>
-      <input id="idShow" type="button" value="Show" />
-      <input id="idAdd" type="button" value="Add" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Basic Dom</title>
+</head>
+<body>
+    <div id="div1">
+        <h1>Basic Dom</h1>
+        <p>This is a list of stuff</p>
+        <ol id="orderedList">
+            <li id="li1">Item1</li>
+            <li>Item2</li>
+            <li>Item3</li>
+        </ol>
+        <button id="show">Show</button>
+        <button id="add">Add to End</button><br>
+        <button id="addStart">Add to Start</button>
+        <button id="remove">Remove last Item</button>
     </div>
-
-    <!-- The Cards Section -->
-    <h1>Working with Cards</h1>
-    <!-- Create the Main Left-hand Panel that will hold the Cards (This is the Parent Object) -->
-    <div class="grid-container">
-      <div class="panel left-panel" id="idLeftPanel">
-        <!-- Create the Add Card Button -->
-        <input id="idAddCard" type="button" value="Add Card" />
-      </div>
-
-      <!-- Create the 2 Remaining Panels -->
-      <div class="panel right-panel" id="idRightPanel1">
-        <h1>Right Side</h1>
-      </div>
-      <!-- How does this work?? -->
-      <div class="panel right-panel" id="idRightPanel1"></div>
-      <div class="panel right-panel" id="idRightPanel2">
-        
-        <h1>Right Side</h1>
-      </div>
-    </div>
-
-    <script type="module" src="./scripts/main.js"></script>
-  </body>
+    <script type="module" src="index.js"></script>
+</body>
 </html>
