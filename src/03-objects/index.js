@@ -23,6 +23,7 @@ leftSide.addEventListener("click", (event) => {
             };
         };
     };
+    
     if (event.toElement.className === "deposite") {
         let currentAccount = event.toElement.parentElement;
         let amount = Number(currentAccount.children[1].value);
@@ -67,6 +68,7 @@ leftSide.addEventListener("click", (event) => {
             operations.deleteExtra(leftSide);
         };
     }
+   // button instead of target
     if (event.toElement.className === "highestBalance") {
         let highestBalanceAccount = Mason.highestBalance();
         display.textContent = `Your ${highestBalanceAccount.accountType} has the highest balance, ${highestBalanceAccount.balance}$`
@@ -80,8 +82,9 @@ leftSide.addEventListener("click", (event) => {
         display.textContent = `The total balance of all of your accounts is ${totalBalance}$`
         };
 });
+//Catches enter key press
 input2.addEventListener("keypress", (event) => {
-    
+
     if (event.which === 13) {
         let newAccountType = input1.value;
         let newAccountBalance = Number(input2.value);
