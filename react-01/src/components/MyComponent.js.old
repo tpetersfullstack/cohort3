@@ -32,5 +32,5 @@ class OddComp extends React.Component {
 }
 
 
-export default MyComp;
-//export {MyComp, EvenComp, OddComp};
+
+export {MyComp, EvenComp, OddComp};

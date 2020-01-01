@@ -1,6 +1,6 @@
 import React from 'react';
-//import MyComp from './components/MyComponent';
-import {MyComp, EvenComp, OddComp} from './components/MyComponent';
+import MyComp from './components/MyComponent';
+//import {MyComp, EvenComp, OddComp} from './components/MyComponent';
 import logo from './logo.svg';
 import './App.css';
 
