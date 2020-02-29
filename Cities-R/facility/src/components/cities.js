@@ -1,138 +1,129 @@
-import { City } from './city.js';
+import { City } from "./city.js";
 
 // here's how i want my cities
 // array of objects containing city and key
 // [ {city: {city}, {counter: autoincrement } }]
 
-
 class Cities {
+  constructor() {
+    this.counter = 0;
+    this.cities = [];
+  }
 
-    constructor () {
-        this.counter = 0;
-        this.cities = [];
+  // aggregate methods
+
+  addCity(newCity) {
+    this.counter = this.counter + 1;
+    this.cities.push({ city: newCity, counter: this.counter });
+    return this.counter;
+  }
+
+  deleteCity(counter) {
+    // arr.findIndex(callback(element[, index[, array]])[, thisArg])
+    const myTestingFunction = element => element.counter === counter;
+    const myIndex = this.cities.findIndex(myTestingFunction);
+    if (myIndex !== -1) {
+      this.cities.splice(myIndex, 1);
     }
+  }
 
-    // aggregate methods
+  getCity(counter) {
+    const myTestingFunction = element => element.counter === counter;
 
-    addCity (newCity) {
-        this.counter = this.counter + 1;
-        this.cities.push ( {"city": newCity, "counter": this.counter}   )
-        return this.counter
-    }
+    return this.cities.find(myTestingFunction).city;
+  }
 
-    deleteCity (counter) {
-        // arr.findIndex(callback(element[, index[, array]])[, thisArg])
-        const myTestingFunction = (element) => element.counter === counter;
-        const myIndex = this.cities.findIndex (myTestingFunction);
-        if (myIndex !== -1) {
-            this.cities.splice(myIndex,1)
+  getCityList() {
+    return this.cities.map(value => value.counter);
+  }
+
+  getMostNorthern() {
+    const howManyCities = this.howManyCities();
+    let mostNorthernCounter = null;
+
+    if (howManyCities > 0) {
+      // i have at least 1 city and i just take the first one
+      // for most northern for now
+      let mostNorthernLatitude = this.cities[0].city.getLatitude();
+      mostNorthernCounter = this.cities[0].counter;
+
+      // and now i'm starting to look at the other
+      for (let i = 1; i < howManyCities; i++) {
+        const currentCityLatitude = this.cities[i].city.getLatitude();
+        if (currentCityLatitude > mostNorthernLatitude) {
+          mostNorthernLatitude = currentCityLatitude;
+          mostNorthernCounter = this.cities[i].counter;
         }
+      }
     }
+    return mostNorthernCounter;
+  }
 
-    getCity (counter) {
+  getMostSouthern() {
+    const howManyCities = this.howManyCities();
+    let mostSouthernCounter = null;
 
-        const myTestingFunction = (element) => element.counter === counter;
+    if (howManyCities > 0) {
+      // i have at least 1 city and i just take the first one
+      // for most northern for now
+      let mostSouthernLatitude = this.cities[0].city.getLatitude();
+      mostSouthernCounter = this.cities[0].counter;
 
-        return this.cities.find(myTestingFunction).city;
-
-    }
-
-    getCityList () {
-        return this.cities.map ( value => value.counter );
-    }
-
-    getMostNorthern () {
-        const howManyCities = this.howManyCities();
-        let mostNorthernCounter = null;
-
-        if ( howManyCities > 0 ) {
-            // i have at least 1 city and i just take the first one
-            // for most northern for now
-            let mostNorthernLatitude = this.cities[0].city.getLatitude();
-            mostNorthernCounter = this.cities[0].counter;
-
-            // and now i'm starting to look at the other
-            for ( let i = 1; i < howManyCities; i++ ) {
-                const currentCityLatitude = this.cities[i].city.getLatitude()
-                if ( currentCityLatitude > mostNorthernLatitude ) {
-                    mostNorthernLatitude = currentCityLatitude;
-                    mostNorthernCounter = this.cities[i].counter;
-                }
-            } 
+      // and now i'm starting to look at the other
+      for (let i = 1; i < howManyCities; i++) {
+        const currentCityLatitude = this.cities[i].city.getLatitude();
+        if (currentCityLatitude < mostSouthernLatitude) {
+          mostSouthernLatitude = currentCityLatitude;
+          mostSouthernCounter = this.cities[i].counter;
         }
-
-        return mostNorthernCounter;
+      }
     }
+    return mostSouthernCounter;
+  }
 
-    getMostSouthern () {
-        const howManyCities = this.howManyCities();
-        let mostSouthernCounter = null;
+  getTotalPopulation() {
+    return this.cities.reduce(
+      (acc, value) => acc + value.city.getPopulation(),
+      0
+    );
+  }
 
-        if ( howManyCities > 0 ) {
-            // i have at least 1 city and i just take the first one
-            // for most northern for now
-            let mostSouthernLatitude = this.cities[0].city.getLatitude();
-            mostSouthernCounter = this.cities[0].counter;
+  howManyCities() {
+    return this.cities.length;
+  }
 
-            // and now i'm starting to look at the other
-            for ( let i = 1; i < howManyCities; i++ ) {
-                const currentCityLatitude = this.cities[i].city.getLatitude()
-                if ( currentCityLatitude < mostSouthernLatitude ) {
-                    mostSouthernLatitude = currentCityLatitude;
-                    mostSouthernCounter = this.cities[i].counter;
-                }
-            } 
-        }
+  // element level methods
 
-        return mostSouthernCounter;
-    }
+  getName(counter) {
+    return this.getCity(counter).getName();
+  }
 
-    getTotalPopulation () {
+  getPopulation(counter) {
+    return this.getCity(counter).getPopulation();
+  }
 
-        return this.cities.reduce (
-            (acc, value) => acc + value.city.getPopulation() , 0
-        )
+  getLongitude(counter) {
+    return this.getCity(counter).getLongitude();
+  }
 
-    }
+  getLatitude(counter) {
+    return this.getCity(counter).getLatitude();
+  }
 
-    howManyCities () {
-        return this.cities.length;
-    }
+  whichHemisphere(counter) {
+    return this.getCity(counter).whichHemisphere();
+  }
 
-    // element level methods
+  moveIn(counter, howMany) {
+    return this.getCity(counter).moveIn(howMany);
+  }
 
-    getName (counter) {
-        return this.getCity(counter).getName();
-    }
+  moveOut(counter, howMany) {
+    return this.getCity(counter).moveOut(howMany);
+  }
 
-    getPopulation (counter) {
-        return this.getCity(counter).getPopulation();
-    }
-
-    getLongitude (counter) {
-        return this.getCity(counter).getLongitude();
-    }
-
-    getLatitude (counter) {
-        return this.getCity(counter).getLatitude();
-    }
-
-    whichHemisphere (counter) {
-        return this.getCity(counter).whichHemisphere();        
-    }
-
-    moveIn (counter, howMany) {
-        return this.getCity(counter).moveIn(howMany);        
-    }
-
-    moveOut (counter, howMany) {
-        return this.getCity(counter).moveOut(howMany);        
-    }
-
-    howBig (counter) {
-        return this.getCity(counter).howBig();        
-    }
-
+  howBig(counter) {
+    return this.getCity(counter).howBig();
+  }
 }
-
-export { Cities }
+export { Cities };
