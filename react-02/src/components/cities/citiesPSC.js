@@ -1,5 +1,4 @@
 class City {
-
   constructor(key, name, latitude, longitude, population) {
     this.key = key;
     this.name = name;
@@ -22,16 +21,25 @@ class City {
   }
 
   howBig(population) {
-    if (this.population > 100000) { return "City" };
-    if (this.population >= 20000) { return "Large town" };
-    if (this.population >= 1000) { return "Town" };
-    if (this.population > 100) { return "Village" };
-    if (this.population >= 1) { return "Hamlet" };
+    if (this.population > 100000) {
+      return "City";
+    }
+    if (this.population >= 20000) {
+      return "Large town";
+    }
+    if (this.population >= 1000) {
+      return "Town";
+    }
+    if (this.population > 100) {
+      return "Village";
+    }
+    if (this.population >= 1) {
+      return "Hamlet";
+    }
   }
 }
 
 class Community {
-
   constructor() {
     this.cities = [];
   }
@@ -43,20 +51,20 @@ class Community {
   }
 
   deleteCity(key) {
-    const citiesArr = this.cities.filter(city =>
-      city.key !== key);
+    const citiesArr = this.cities.filter(city => city.key !== key);
     this.cities = citiesArr;
   }
 
   whichSphere(latitude) {
     if (latitude > 0) {
       return "Northern Hemisphere";
+    } else {
+      return "Southern Hemisphere";
     }
-    else { return "Southern Hemisphere"; }
-  };
+  }
 
   getMostNorthern() {
-    return this.cities.sort((a, b) => b.latitude - a.latitude)[0];
+    return this.cities.slice().sort((a, b) => b.latitude - a.latitude)[0];
   }
 
   getMostSouthern() {
@@ -64,8 +72,8 @@ class Community {
   }
 
   getPopulation() {
-    return this.cities.reduce(((acc, cur) => acc + cur.population), 0);
+    return this.cities.reduce((acc, cur) => acc + cur.population, 0);
   }
 }
 
-export default Community;
+export { City, Community };
