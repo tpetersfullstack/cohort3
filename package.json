@@ -16,10 +16,13 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@babel/cli": "^7.0.0",
+        "@babel/cli": "^7.8.4",
         "@babel/preset-env": "^7.0.0",
         "eslint": "^6.6.0",
         "eslint-plugin-react": "^7.16.0",
-        "jest": "^24.9.0"
+        "jest": "^25.1.0"
+    },
+    "dependencies": {
+        "acorn": "^7.1.1"
     }
 }
