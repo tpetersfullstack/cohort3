@@ -1,0 +1,71 @@
+input {
+    width: 7em;
+} 
+
+button {
+    width: 7em;
+} 
+
+.controller {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr)); /* see notes below */
+}
+
+.cityCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr)); /* see notes below */
+}
+
+.cityCard {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-auto-rows: 1.5em; 
+    column-gap: 10px;
+
+    border-radius: 10px;
+    background-color: deepskyblue;
+    padding: 5px;
+    margin: 5px;
+}
+
+.widestColumn { 
+    grid-column-start: 1; 
+    grid-column-end: 5; 
+    justify-self: center;
+}
+.wideColumn1 { 
+    grid-column-start: 1; 
+    grid-column-end: 3; 
+}
+
+.wideColumn2 { 
+    grid-column-start: 3; 
+    grid-column-end: 5; 
+}
+
+.normalColumn {
+    justify-self: center;
+}
+
+.cityCardCell {
+    display: table-cell;
+}
+
+.cityCardHeader {
+    display: table-footer-group;
+    text-align: center;
+}
+
+.infoMessage {
+    color: white;
+}
+
+
+.infoMessageEntryAnimation {
+    color: red;
+    animation:  blinker 2s linear infinite;
+}
+
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
